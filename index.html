@@ -1,0 +1,72 @@
+<!-- Author: John Bowden -->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+
+    <div id="container">
+
+        <div id="head">
+            <div id="history"></div>
+            <div id="operand"></div>
+            <div id="val"></div>
+        </div>
+        <div id="result">
+            <span>0</span>
+        </div>
+        <div id="operands-right">
+            <div class="vert-row">
+                <div data-oper="clear" class="btn small-font" id="btn-clear">C</div>
+                <div data-oper="power" data-single="true" class="btn small-font oper" id="btn-power">N<sup>x</sup></div>
+                <div data-oper="square_root" data-single="true" class="btn oper" id="btn-sqr">√</div>
+                <div data-oper="log10" data-single="true" class="btn small-font oper" id="btn-log">log</div>
+                <div data-oper="enter" class="btn small-font" id="btn-enter">Enter</div>
+            </div>
+        </div>
+        <div id="operands-top">
+            <div class="row">
+                <div data-oper="subtract" class="btn oper" id="btn-minus">-</div>
+                <div data-oper="add" class="btn oper" id="btn-plus">+</div>
+                <div data-oper="divide" class="btn oper" id="btn-div">/</div>
+                <div data-oper="multiply" class="btn oper" id="btn-mult">*</div>
+            </div>
+        </div>
+        <div id="keys">
+            <div class="row">
+                <div class="btn num" id="btn-7">7</div>
+                <div class="btn num" id="btn-8">8</div>
+                <div class="btn num" id="btn-9">9</div>
+            </div>
+            <div class="row">
+                <div class="btn num" id="btn-4">4</div>
+                <div class="btn num" id="btn-5">5</div>
+                <div class="btn num" id="btn-6">6</div>
+            </div>
+            <div class="row">
+                <div class="btn num" id="btn-1">1</div>
+                <div class="btn num" id="btn-2">2</div>
+                <div class="btn num" id="btn-3">3</div>
+            </div>
+        </div>
+        <div id="operands-bottom">
+            <div class="row">
+                <div class="btn num" id="btn-0">0</div>
+                <div data-oper="decimal" class="btn" id="btn-dec">.</div>
+                <div data-oper="delete" class="btn small-font" id="btn-del">Del</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="library/jquery/dist/jquery.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
