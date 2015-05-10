@@ -46,6 +46,9 @@
         btn.mouseup(function () {
             $(this).removeClass('btn-press');
         });
+        btn.mouseout(function () {
+            $(this).removeClass('btn-press');
+        });
 
         // run operator events
         $('.oper').click(function () {
@@ -146,15 +149,21 @@
                     hist.html(hist.html() + op.html() + val.html());
                 }
             }
-            op.html('');
             $.ajax({
                 url: url,
                 dataType: "json",
                 success: function( response ) {
+                    op.html('');
                     val.html('');
                     _result = response.result;
                     _clear = false;
                     $('#result span').html(_result);
+                },
+                error: function () {
+                    $('#result span').html('ERROR');
+                    setTimeout(function () {
+                        $('#btn-clear').click();
+                    },2000);
                 }
             });
         }
